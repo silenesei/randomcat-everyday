@@ -1,0 +1,40 @@
+@import url("https://fonts.googleapis.com/css2?family=Margarine&display=swap");
+
+body {
+  position: relative;
+  margin: 0 auto;
+  font-family: "Margarine", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  color: rgba(0, 0, 0, 0.689);
+  text-align: center;
+  font-size: 25px;
+  background-color: rgb(255, 244, 236);
+  background-image: url("../assets/cat-paws.webp");
+  background-size: contain;
+  background-repeat: repeat;
+}
+
+#container {
+  padding: 100px;
+}
+
+#cat {
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  max-width: 100%;
+  border-radius: 10px;
+  border: solid 25px rgba(169, 153, 153, 0.633);
+}
+#get-btn {
+  font-family: "Margarine", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 20px;
+}
+
+footer {
+    font-size: 13px;
+    padding: 10px;
+}
