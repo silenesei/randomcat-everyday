@@ -26,7 +26,7 @@ body {
   font-style: normal;
   color: rgba(0, 0, 0, 0.728);
   text-align: center;
-  font-size: 28px;
+  font-size: 4vw;
   background-color: rgb(255, 244, 236);
   background-image: url("../assets/cat-paws2.jpg.avif");
   background-size: auto;
@@ -38,20 +38,21 @@ body {
 }
 
 .wave {
-  font-size: 50px;
   font-weight: bold;
   display: block;
   animation: wave 1s infinite alternate ease-in-out;
 }
 
 h2 img {
-  max-height: 40px;
+  max-height: 6vw;
 }
 #cat {
   box-sizing: border-box;
- display: block;
- margin: 0 auto;
-  max-width: 350px;
+  display: block;
+  margin: 20px auto;
+  max-width: 80%;
+  height: auto;
+  margin-bottom: 80px;
   border-radius: 10px;
   border: solid 25px rgba(169, 153, 153, 0.633);
 }
@@ -65,7 +66,7 @@ h2 img {
 }
 
 .loading span {
-  animation: dot-blink 2s infinite steps(1, end);
+  animation: dot-blink 5s infinite steps(1, end);
 }
 .loading span:nth-child(1) {
   animation-delay: 0.1s;
@@ -80,10 +81,10 @@ h2 img {
   font-family: "Margarine", sans-serif;
   font-weight: 400;
   font-style: normal;
-  font-size: 24px;
+  font-size: 4vw;
   background-color: rgb(40, 33, 33);
   color: whitesmoke;
-  padding: 10px;
+  padding: 15px;
   border-radius: 10px;
   display: inline-block;
   cursor: pointer;
@@ -97,7 +98,42 @@ h2 img {
   transform: translateY(4px);
 }
 
+.result {
+  display: none;
+  position: fixed;
+  bottom: -40%;
+  right: 20px;
+  transform: translateX(-50%);
+  width: 45%;
+  height: 15%;
+  background-color: #3f3636ca;
+  border-radius: 25px;
+  padding: 15px;
+  overflow: hidden;
+  transition: bottom 1s ease-in-out;
+  z-index: 1000;
+}
+
+.result-content {
+  color: rgb(245, 245, 245);
+  font-size: 20px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.result.show {
+  display: block;
+  bottom: 20px;
+}
+
+.result-content p img {
+  max-height: 40px;
+}
+
 footer {
-  font-size: 13px;
+  font-size: 2.5vw;
   padding: 10px;
 }
