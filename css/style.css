@@ -1,4 +1,22 @@
 @import url("https://fonts.googleapis.com/css2?family=Margarine&display=swap");
+@keyframes wave {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-7px);
+  }
+}
+@keyframes dot-blink {
+  0%,
+  100% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+}
 
 body {
   position: relative;
@@ -6,12 +24,12 @@ body {
   font-family: "Margarine", sans-serif;
   font-weight: 400;
   font-style: normal;
-  color: rgba(0, 0, 0, 0.689);
+  color: rgba(0, 0, 0, 0.728);
   text-align: center;
-  font-size: 25px;
+  font-size: 28px;
   background-color: rgb(255, 244, 236);
-  background-image: url("../assets/cat-paws.webp");
-  background-size: contain;
+  background-image: url("../assets/cat-paws2.jpg.avif");
+  background-size: auto;
   background-repeat: repeat;
 }
 
@@ -19,22 +37,67 @@ body {
   padding: 100px;
 }
 
+.wave {
+  font-size: 50px;
+  font-weight: bold;
+  display: block;
+  animation: wave 1s infinite alternate ease-in-out;
+}
+
+h2 img {
+  max-height: 40px;
+}
 #cat {
   box-sizing: border-box;
-  display: flex;
-  justify-content: center;
-  max-width: 100%;
+ display: block;
+ margin: 0 auto;
+  max-width: 350px;
   border-radius: 10px;
   border: solid 25px rgba(169, 153, 153, 0.633);
+}
+
+#loading-ind {
+  display: none;
+  font-size: 100px;
+  text-align: center;
+  font-weight: bold;
+  color: #3f3636;
+}
+
+.loading span {
+  animation: dot-blink 2s infinite steps(1, end);
+}
+.loading span:nth-child(1) {
+  animation-delay: 0.1s;
+}
+.loading span:nth-child(2) {
+  animation-delay: 10s;
+}
+.loading span:nth-child(3) {
+  animation-delay: 20s;
 }
 #get-btn {
   font-family: "Margarine", sans-serif;
   font-weight: 400;
   font-style: normal;
-  font-size: 20px;
+  font-size: 24px;
+  background-color: rgb(40, 33, 33);
+  color: whitesmoke;
+  padding: 10px;
+  border-radius: 10px;
+  display: inline-block;
+  cursor: pointer;
+  outline: none;
+  border: none;
+  box-shadow: 0 9px #6c5e5e;
+}
+#get-btn:active {
+  background-color: #3f3636;
+  box-shadow: 0 5px #a89393;
+  transform: translateY(4px);
 }
 
 footer {
-    font-size: 13px;
-    padding: 10px;
+  font-size: 13px;
+  padding: 10px;
 }
