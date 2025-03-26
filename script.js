@@ -1,13 +1,20 @@
 const $getCatBtn = document.getElementById("get-btn");
 const $idCat = document.getElementById("cat");
+const $clickSound = document.getElementById("click-sound");
+const $loadingInd = document.getElementById("loading-ind");
 
 $getCatBtn.addEventListener("click", () => {
-  fetch("https://api.thecatapi.com/v1/images/search")
-    .then((res) => res.json())
-    .then((response) => {
-      console.log(response);
+  $clickSound.play();
+});
 
-      const randomCat = response[0].url;
-      $idCat.src = randomCat;
-    });
+$getCatBtn.addEventListener("click", async () => {
+  $loadingInd.style.display = "block";
+  $idCat.style.visibility = "hidden";
+
+  const response = await fetch("https://api.thecatapi.com/v1/images/search");
+  const data = await response.json();
+
+  $idCat.src = data[0].url;
+  $idCat.style.visibility = "visible";
+  $loadingInd.style.display = "none";
 });
