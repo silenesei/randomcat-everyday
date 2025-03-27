@@ -49,9 +49,8 @@ h2 img {
   max-height: 5vw;
 }
 #cat {
-  box-sizing: border-box;
   display: block;
-  margin: 20px auto;
+  margin: 10px auto;
   max-width: 80%;
   height: auto;
   margin-bottom: 80px;
@@ -118,7 +117,7 @@ h2 img {
 
 .result-content {
   color: rgb(245, 245, 245);
-  font-size: 20px;
+  font-size: 3vw;
   text-align: center;
   display: flex;
   justify-content: center;
